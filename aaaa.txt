@@ -1,0 +1,200 @@
+      
+
+      
+      
+
+      TABLE OF CONTENTS
+      
+      INTRODUCTION	3
+      THE PROBLEM	4
+      THE SET UP	5
+      1. Static Variables	5
+       a. Age:	5
+       b. Collateral for loan:	5
+       c. Credit Score:	6
+       d. Income:	6
+      Static Variables Diagram	7
+      2. CONFIDENCE VARIABLE	8
+      3. SETTING UP INFERENCE RULES	9
+      4. STEPS THROUGH THE SOFTWARE	10
+      Step 1 - Creation of Static Variables	10
+      Step 2 - Creation of Logic Blocks (For Assigning Values to Static Variables)	10
+      Step 3 – Creation of Confidence Variables	12
+      Step 5 – Creation of Inference Rules	13
+      Step 9 - Creation of Command Blocks	14
+      Step 10 – Showing the output	14
+      3. Conclusion	15
+      4. Reference List	16
+      References	16
+      
+      
+      
+     
+INTRODUCTION
+      
+      Nowadays, banks are in the business of supporting sound and viable financial decisions, therefore every request must be considered on its own merits. Some of the applications a bank receives will not be approved, simply because the risk the bank is required to carry is too high, or because it believes the applicant cannot support the risk.
+      Banks are required to make prudentially responsible lending decisions by the Australian Prudential Regulation Authority (APRA). This means, for every loan application, a bank must consider the risks it is taking on and the risks the borrower is taking on, including a borrower’s ability to repay the loan. The more risk the bank takes on, the more capital it has to hold against a loan.
+      An aspect of extraordinary importance in the management of credit risks is related to the analysis and evaluation of risk, as well as the classification of customers. These risk analysis processes require sources of information, both internal and external and of specific systems.
+      With this work, we are creating a fuzzy logic model for a bank to make the right decision whether if it should offer a low loan, a moderate or a high one to the applicants who are asking for one.
+      According to the rules created based on the condition of each client, the software will use fuzzy logic to come up with a decision that should be the best for both, bank and client.
+     
+THE PROBLEM
+      
+      A credit can be defined as a loan in money given to a person with the commitment to return the amount received for the capital, plus the accrued interest and the associated costs within the indicated period of time, according to the conditions established with the creditor. The possibility of obtaining a loan depends on the moral or economic prestige of the person.
+      The bank needs to choose the best credit conditions, which fit the needs and cash flow of the person concerned and for that, it must consider several factors.
+      Analyzing the history of credits and constructing a client’s profile according to past credits, the parameters for the fuzzy logic decision making are created in order for the software to come up with a decision that should be the best option for both the bank and the client.
+      The main objective is to ensure that the risks of the financial institution remain at reasonable levels that allow a good profitability to it; in addition to solid training of credit analysis software that allows solidity when issuing a criterion.
+      The main objective of the project will be to determine the risk that the institution will have to grant a certain credit, and for this it is necessary to know through a careful analysis, the financial statements of the client, analysis of the various qualitative and quantitative points, which together, will allow to have a better vision on the client and the capacity to be able to pay said credit.
+     
+THE SET UP
+For this model, we set up a series of variables to consider making de final decision.
+1. Static Variables
+      a. Age: 
+Regardless of having a good credit history and good income, age is an influential factor in the decision-making process. According to the bank's loan history, it is risky to grant loans to people over 50 with terms over 10 years. In case of granting it, the bank may request the presentation of a guarantee, a person who can take charge of the payment of the debt in case of death and usually grants small loans. A low score is awarded.
+The bank considers as entering the labor field people between 18 and 25 years, so their income is generally not so high, as well as their chances of guaranteeing the continuity of the payment, for what usually gives this group moderate loans. A medium score is awarded.
+The bank considers people between 25 and 60 as highly productive people with experience in the labor field. This group, in general, has good income, as well as job stability, in addition to high probabilities of guaranteeing the continuity of payment, for which reason it generally grants this group large loans. A high score is awarded.
+      b. Collateral for loan: 
+In some cases, the bank requires guarantees for the granting of the loan. This means that in case of insolvency by the borrower, the bank will be compensated. 
+The bank considers a car as a low-level guarantee when it comes to guarantees for the loan, so probably the approved credit will not be too high.
+In the case of a home, the level of collateral is considered as medium, so a moderate loan could be considered in this situation.
+A company is considered by the bank as a high level guarantee, so a high loan can be offered in these cases.
+
+
+      c. Credit Score: 
+This measurement serves to demonstrate to the financial institution that the client is a low risk person and therefore can loan him money with lower interest. That is, the better score you have in your Credit Score, the cheaper the credit will come out.
+This tool has a measurement that is represented in a kind of meter that tells financial institutions how your behavior has been in the past. That is, if the meter is high, it indicates to the banks that the client is a good subject of credit, so it will be considered a high loan. A high score is awarded.
+In case the meter is medium, the bank recognizes the client as a medium level, for which a score of the same level is granted.
+In case of having a low Credit Score, the bank classifies the client as potentially risky, for which reason a low score is granted for the granting of the credit.
+      d. Income: 
+Checking your income is simple when you are a natural person. It suffices to present a payroll receipt or a statement of account to demonstrate that you will have the capacity to devote no more than 30% of your income to the payment of your loan.
+That's why financial institutions ask you if you pay rent, have people dependent on your salary - as children or parents -, as well as other consumptions so as not to get into debt and so you can continue paying.
+In the case of a person with high income, the bank will give a high score when making decisions for the granting of credit. Likewise, it will award an average score if it considers that its income is of medium range and a low score in the event that its income is of the same characteristic.
+      
+      
+      
+      
+      
+      
+      
+      
+Static Variables Diagram
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     
+2. CONFIDENCE VARIABLE
+      
+      Confidence sets are generally interpreted in terms of replications of an experiment. There are the parameters to check the output of any experiments performed.
+      However, it is also true that the actual output can be interpreted by observing the original samples taken during the experiment. Any confidence set will or can have probability 1 or 0 depending on the parameter value.
+      In this experiment, we took confidence variables which tell us whether to give high, moderate or low loan to a person applied depending on the value of static variables. 
+      A person gets a specific score on some criteria like age, collateral for loan, credit score and income which are known as confidence values for confidence variables. And thus, depending on the values of confidence variables and set of rules (inference rules) defined by us, we can decide the result of the experiment.
+      In this paper, we provide a confidence set analysis for an observed sample based on fuzzy set theory by using the concept of membership functions. 
+      So, how does the bank choose whether to give a small, moderate or large loan?
+      For the confidence value for each variable, we consider scores from -10 to 10 to specify the degree of importance according to each factor to do the fuzzy logic calculation.
+      A value that reflects a degree of certainty in a specific result, will be assigned.
+      
+      
+      
+      
+      
+      
+     
+3. SETTING UP INFERENCE RULES
+      
+      The methods of inference for this rule base must be simple, versatile and efficient. The results of these methods are a final area, as a result of a set of overlapping areas.
+      For displaying some results, we need to put the confidence values in some constraints, and these constraints are the inference rules specified by us.
+      Every input will be checked under these set of predefined rules and will give the results.
+      Usually we set these rules under a specific format of “if, and, then”, where if some condition occurs, a specific output should come up. In addition, if there is more than one condition to check, we add an “and” block to link those together. Each area is the result of an inference rule. 
+      The rules available to the inference engine of a diffuse system can be formulated by experts or learned by the system itself, making use, in this case, of a software called Corvid, created specifically for that purpose in futures decision making.
+      
+
+
+4. STEPS THROUGH THE SOFTWARE
+ Step 1 - Creation of Static Variables
+
+     
+Step 2 - Creation of Logic Blocks (For Assigning Values to Static Variables)
+      a. Collateral for loan
+
+      b. Age for loan
+      
+      c. Income for loan
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      d. Credit Score
+      
+      
+Step 3 – Creation of Confidence Variables
+      
+      
+Step 4 – Creation of Result Static Variables 
+      
+Step 5 – Creation of Inference Rules
+
+ 
+      
+      
+     Step 6 - Creation of Command Blocks
+     
+     Step 7 – Showing the output 
+
+
+5. Conclusion
+      
+      This research has concentrated on the impacts and causes. Based on the surveys and some facts 
+      
+      From this experiment, we can conclude that using fuzzy logic can be beneficial to take any decision in any business environment. But we need consider some important factors like the Confidence Variables (for providing profit to organizations), the set of static variables (the main factors which will give the………………. & the set of rules or constraints which will decide the resultant output.
+      We have ‘n’ no of tools for this but we have used corvid, which has a good user interface & help us to take the correct decision in any business scenario.
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      6. REFERENCES
+Richard C. Thompson, S. H. (2009, June 14). Philosophical Transactions of the Royal Society B. Retrieved from The Royal Society Publishing: http://rstb.royalsocietypublishing.org/content/364/1526/1973
+sdasdaSASa. (n.d.).
+      
+      
+Assignment 1 – Bank Loan Simulation  
+      
+
+       - 16 -
+Business Intelligence
+      
